@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塔罗占卜 - Entelecheia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ 塔罗占卜 ✨</h1>
+            <p class="subtitle">探索命运的秘密</p>
+        </header>
+
+        <main>
+            <div class="card-display">
+                <div class="card" id="tarot-card">
+                    <div class="card-content">
+                        <p class="card-placeholder">点击下方按钮<br>抽取一张塔罗牌</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h2 id="card-name">等待中...</h2>
+                <p id="card-meaning" class="meaning">点击抽取按钮开始占卜</p>
+                <p id="card-status" class="status"></p>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="drawCard()">🔮 抽取塔罗牌</button>
+                <button class="btn btn-secondary" onclick="resetCard()">🔄 重新开始</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Entelecheia Project - 完美实现的力量</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
